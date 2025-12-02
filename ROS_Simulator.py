@@ -34,7 +34,7 @@ if "finalized" not in st.session_state:
     st.session_state.finalized = {}
 
 # Quick lookup of projected points for each week
-proj_lookup = stats_df.set_index("Team")[["Week 13", "Week 14"]]
+proj_lookup = stats_df.set_index("Team")[["Week 14"]]
 
 # ====================================================================
 # 3. UNDO / APPLY LOGIC
@@ -152,7 +152,6 @@ def simulate_week(week):
 # 5. DISPLAY FLOW: WEEK 12 → WEEK 13 → WEEK 14
 # ====================================================================
 
-simulate_week(13)
 simulate_week(14)
 
 st.header("Final Standings After Week 14")
