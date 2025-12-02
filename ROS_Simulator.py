@@ -19,7 +19,7 @@ schedule_df = pd.read_excel(DATA_PATH, sheet_name="Schedule")
 
 # We only need Wins, PF for standings here
 initial_records = stats_df[["Team", "Wins", "PF"]].copy()
-initial_records["Loss"] = 12 - initial_records["Wins"]
+initial_records["Loss"] = 13 - initial_records["Wins"]
 
 # ====================================================================
 # 2. INITIALIZE SESSION STATE
